@@ -1,0 +1,1 @@
+<a href="?current=<?php echo($file); ?>"><?php echo(ucfirst($file)); ?></a>
