@@ -1,0 +1,285 @@
+//Dark Theme
+//Background-Colors
+$d_B1: #212121;
+$d_B2: #303030;
+$d_B3: #424242;
+$d_B4: #696969;
+$d_B5: #848484;
+$d_B6: #9F9F9F;
+
+//Colors
+$d_H1: #FFF;
+$d_H2: #929292;
+
+//Fonts
+@mixin sideNavFont($size){
+    font-size: $size;
+    font-family: 'OpenSansBold', sans-serif;
+    font-weight: bold;
+}
+
+//Dimensions
+//SideNav
+$s_left: 15%;
+//Header
+$h_top: 10%;
+
+//Body
+body{
+    margin-right:5%;
+    background-color: $d_B3;
+}
+
+//SideNav
+#sideNav{
+    height: 100%; 
+    width: $s_left;
+    position: fixed; 
+    z-index: 1; 
+    top: $h_top; 
+    left: 0;
+    color: $d_H2;
+    overflow-x: hidden; 
+    background-color: $d_B2; 
+    padding-top: 60px; 
+    transition: all ease 0.5s; 
+   /* .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }*/
+    #sideMenu{
+        .dropdown-content{
+            overflow-x: hidden; 
+            background-color: $d_B2; 
+            display: none;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            z-index: 1;
+            position: relative;
+            z-index: 9999;
+            top: 0 !important;
+            width: auto !important;
+            height: auto !important;
+            -webkit-transition: all ease 0.4s;
+            -moz-transition: all ease 0.4s;
+            transition: all ease 0.4s;
+            a{
+                color: $d_H2;
+                height: inherit;
+                &:hover{
+                    color: $d_H1;   
+                }
+            }
+        }
+        a{
+            padding: 15px;
+            color: inherit;
+            height: inherit;
+            width: 100%;
+            @include sideNavFont(25px);
+            text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            
+            -webkit-transition: all ease 0.6s;
+            -moz-transition: all ease 0.6s;
+            transition: all ease 0.6s;
+            span{
+                margin:0px 24px 0px 24px;
+                padding: 8px
+            }
+            &:hover{
+                color: $d_H1;
+                box-shadow: inset 4px 1px 50px 20px $d_H2;       
+            }
+        }
+    }
+}
+//SideNav Btns
+.sideNavBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $d_H2;
+    font-size: 35px;
+    cursor: pointer;
+    &:hover{
+        color: $d_H1;
+    }
+  }
+#close{
+    display:block;
+}
+#open{
+    display:none;
+}
+
+//Header
+#headNav{
+    height: $h_top; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 2; 
+    top: 0; 
+    left: 0;
+    background-color: $d_B1; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    p{
+        @include sideNavFont(20px);
+        margin-left:200px;
+        margin-top:30px;
+        color: $d_H1;
+      }
+}
+#location{
+    @include sideNavFont(20px);
+    color: $d_H1;
+}
+  /*ADd margins to side nav to fix*/
+.card{cursor: pointer;}
+
+//Main
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  margin-left: $s_left + 5%;
+  margin-top: 10%;
+}
+
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+
+#videoText{
+  color:$d_H1;
+}
+
+#squirrel{
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 60px;
+    color: rgba(0,0,0,1);
+    img{
+        box-shadow: 6px 6px 6px 0px !important;
+        border-radius: 65px;
+    }
+}
+
+#location{
+    position: absolute;
+    top: $h_top + 2%;
+    left: $s_left + 2%;
+    text-transform: uppercase;
+}
+
+/*
+.card{
+    &::before,
+    &::after{
+        content:'';
+        position: absolute;
+        top: 1.25em;
+        bottom: 1.25em;
+        left: 1.25em;
+        right: 1.25em;
+        z-index: 999;
+        opacity: 0.4;
+        
+    }
+
+    &::before{
+        background: $d_B4;
+        transform: scale(0,1);
+        transition: transform ease-out 250ms;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    &::after{
+        transform: scale(1,0);
+        transition: transform ease-out 250ms;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+    &:hover::before{
+        transform: scale(1,1);
+    }
+    &:hover::after{
+        transform: scale(1,1);
+    }
+}
+*/
+
+.hovering{
+    &:hover{
+        box-shadow: 16px 17px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);   
+    }
+}
+
+$image: 80px;
+
+
+
+
+table { 
+   // height:$image+20px;
+    padding: 10px;
+    text-transform: uppercase;
+    box-shadow: 16px 17px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+    border-radius: 30px;  
+    @include sideNavFont(20px);
+    img{
+        position: relative;
+        width:$image; 
+        height:$image;
+        margin-right: 20px;
+    }
+    td{
+        padding: 20px;
+    }
+    tr{
+        background: #AAA; 
+        &:nth-child(odd) {
+             background: #FFF; 
+        }
+        border-bottom: solid $d_B5 2px;
+    }
+    thead{
+        border-bottom: solid $d_B4 2px;
+    }    
+}
+
+
+
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

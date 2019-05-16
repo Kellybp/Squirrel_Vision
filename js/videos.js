@@ -2,7 +2,7 @@ function myFunction(imgs, current) {
   // Get the expanded image
   var expandImg = document.getElementById("expandedImg");
   // Get the image text
-  var imgText = document.getElementById("imgtext");
+  var imgText = document.getElementById("videoText");
   var source = document.getElementById("source");
   // Use the same src in the expanded image as the image being clicked on from the grid
   source.src = "videos/"+ current +"/" + imgs;

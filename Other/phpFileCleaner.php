@@ -5,13 +5,12 @@
 			$videos = scandir('../videos/'.$dir);
 			foreach($videos as $video) { 
 				if(($video!=".")&&($video!="..")){
-					echo $video;
+					$path = '../videos/'.$dir.'/'.$video;
 					if(preg_match("(')",$video)){
-						$path = '../videos/'.$dir.'/'.$person.'/';
-						rename($path.$video, $path.preg_replace("(')","",$video));
+						rename($path, $path.preg_replace("(')","",$video));
 					}
 					if(preg_match("(#)",$video)){
-						rename($path.$video, $path.preg_replace("(#)","",$video));
+						rename($path, $path.preg_replace("(#)","",$video));
 					}
 				}
 			}
