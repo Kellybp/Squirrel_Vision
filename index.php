@@ -24,35 +24,32 @@
 
 
 <div id="main">
-	<div id="location"><p><?php if(isset($_GET['current'])){echo($_GET['current']);} ?></p></div>
-	<!--Video Container-->
+		
 	<?php if(isset($_GET['current'])): ?>
-	<div class="container">
-	  <video  id="expandedImg" width="100%" height="100%" controls="controls">
-		  <source id="source" src="" type="video/mp4">
-	  </video> 
-	 <div id="videoText"></div> 
-	 <!--<div id="videoTarget"></div>-->
-	</div>
+		<div id="location"><p><?php if(isset($_GET['current'])){echo($_GET['current']);} ?></p></div>
+		<!--Video Container-->
+		<div class="container">
+			<video  id="expandedImg" width="100%" height="100%" controls="controls">
+				<source id="source" src="" type="video/mp4">
+			</video> 
+		<div id="videoText"></div> 
+		<!--<div id="videoTarget"></div>-->
+		</div>
 		<?php else: ?>
-		<table>
-			<thead>
-				<tr>
-					<td>Image</td>
-					<td>Title</td>
-					<td>Edit</td>
-					<td>Delete</td>
-				</tr>
-			</thead>
-			<tbody>
+		<div id="location"><p>Edit Menu</p></div>
 		<?php
+			$rowcounter=1;
+			include("Models/row.php");
 				foreach($files as $file) { 
 					if(($file!=".")&&($file!="..")){
 							include("Models/home.php");
+							if($rowcounter%3==0){
+		  					include("Models/endDiv.php");
+		  					include("Models/row.php");
+							}
+							$rowcounter++;
 		  			}
 				} ?>
-			</tbody>
-			</table>
 	<?php endif ?>
 	<br/>
 	<br/>

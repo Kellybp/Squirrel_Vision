@@ -178,23 +178,21 @@ body{
     text-transform: uppercase;
 }
 
-/*
-.card{
-    &::before,
-    &::after{
-        content:'';
-        position: absolute;
-        top: 1.25em;
-        bottom: 1.25em;
-        left: 1.25em;
-        right: 1.25em;
-        z-index: 999;
-        opacity: 0.4;
-        
-    }
 
+
+
+
+.editMenu{
+    background-color: $d_B4;
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        top:1.25em;
+        bottom:1.25em;
+        left:1.25em;
+        right:1.25em;
+    }
     &::before{
-        background: $d_B4;
         transform: scale(0,1);
         transition: transform ease-out 250ms;
         border-top: 1px solid white;
@@ -206,14 +204,49 @@ body{
         border-left: 1px solid white;
         border-right: 1px solid white;
     }
-    &:hover::before{
-        transform: scale(1,1);
+    &:hover{
+        &::before{
+            transform: scale(1,1);
+        }
+        &::after{
+            transform: scale(1,1);
+        }
+        .edit{
+            opacity: 0.4;
+            }
+        .card-content{
+            opacity: 1;
+        }
     }
-    &:hover::after{
-        transform: scale(1,1);
+    .card-content{
+        text-align: center;
+        opacity: 0.0;
+        z-index: 1;
+        position: relative;
+        top: -300px;
+        color: $d_H1;
+        @include sideNavFont(20px);
+        background-color: rgba(0,0,0,0) !important;
+        transition:  opacity ease-out 250ms;
+        a{
+            position: relative;
+            top: 6em;
+            &:nth-child(1) {margin-right: 50px;}
+        }
+    }
+    .edit{
+        height:300px !important; 
+        width:450px;
+        transition: opacity ease-out 250ms;
+        img{
+           height:100%; 
+           width:100%;
+        }
     }
 }
-*/
+
+
+
 
 .hovering{
     &:hover{
@@ -223,10 +256,7 @@ body{
 
 $image: 80px;
 
-
-
-
-table { 
+/*table { 
    // height:$image+20px;
     padding: 10px;
     text-transform: uppercase;
@@ -253,7 +283,7 @@ table {
         border-bottom: solid $d_B4 2px;
     }    
 }
-
+*/
 
 
 
