@@ -4,7 +4,7 @@
     <div class="card small hovering">
       <!--Use this line to link back to top href='#'
         While using onclick to setup the video-->
-      <a href="#"  class="waves-effect waves-light" onclick="myFunction('<?php echo($file); ?>','<?php echo $_GET['current']; ?>')">
+      <a href="#" onclick="myFunction('<?php echo($file); ?>','<?php echo $_GET['current']; ?>')">
           <div class="card-image">
             <img src="images/<?php echo $_GET['current']; ?>.jpg" alt="<?php echo($file); ?>">
           </div>

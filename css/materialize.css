@@ -2821,11 +2821,7 @@ form p {
 form p:last-child {
   margin-bottom: 0; }
 
-/* Remove default checkbox */
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px;
-  visibility: hidden; }
+
 
 [type="checkbox"] {
   /* checkbox aspect */ }

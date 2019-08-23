@@ -1,3 +1,44 @@
+/* The Modal (background) 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    max-height: 100%;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+      }
+      p{
+        color: black;
+        margin: 10px !important;
+      }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+  }
+
+  */
 body {
   margin-right: 5%;
   background-color: #424242; }
@@ -104,12 +145,6 @@ body {
     margin-top: 30px;
     color: #FFF; }
 
-#location {
-  font-size: 20px;
-  font-family: 'OpenSansBold', sans-serif;
-  font-weight: bold;
-  color: #FFF; }
-
 /*ADd margins to side nav to fix*/
 .card {
   cursor: pointer; }
@@ -120,7 +155,7 @@ body {
   transition: margin-left .5s;
   padding: 20px;
   margin-left: 20%;
-  margin-top: 10%; }
+  margin-top: 5%; }
 
 /*@media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -141,10 +176,13 @@ body {
     border-radius: 65px; }
 
 #location {
-  position: absolute;
+  position: relative;
   top: 12%;
-  left: 17%;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'OpenSansBold', sans-serif;
+  font-weight: bold;
+  color: #FFF; }
 
 .editMenu {
   background-color: #696969; }
@@ -210,13 +248,20 @@ body {
         margin-right: 50px; }
   .editMenu .edit {
     height: 300px !important;
-    width: 450px;
     -webkit-transition: opacity ease-out 250ms;
     -o-transition: opacity ease-out 250ms;
     transition: opacity ease-out 250ms; }
     .editMenu .edit img {
       height: 100%;
       width: 100%; }
+
+.connectedSortable {
+  padding: 20px; }
+  .connectedSortable li {
+    background: #696969;
+    padding: 20px; }
+  .connectedSortable li:nth-child(odd) {
+    background: #848484; }
 
 .hovering:hover {
   -webkit-box-shadow: 16px 17px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
